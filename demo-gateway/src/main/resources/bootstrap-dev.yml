@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    nacos:
+      #config:
+      #  server-addr: localhost:8848
+      #  file-extension: yaml
+      #  namespace: af17876e-22f1-438e-aeba-a19c6153e1be
+      discovery:
+        server-addr: localhost:8848
+        namespace: af17876e-22f1-438e-aeba-a19c6153e1be
+
+    gateway:
+      routes:
+        - id: demo-user
+          uri: lb://demo-user
+          predicates:
+            -  Path=/demo-user/**
+          filters:
+            - RewritePath=/demo-user/(?<segment>.*), /$\{segment}
+        - id: demo-order
+          uri: lb://demo-order
+          predicates:
+            - Path=/demo-order/**
+          filters:
+            - RewritePath=/demo-order/(?<segment>.*), /$\{segment}
+

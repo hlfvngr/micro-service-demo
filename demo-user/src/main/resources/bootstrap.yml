@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: demo-user
+server:
+  port: 9001
