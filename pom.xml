@@ -15,6 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
+        <module>demo-auth</module>
         <module>demo-common</module>
         <module>demo-dependencies</module>
         <module>demo-gateway</module>
