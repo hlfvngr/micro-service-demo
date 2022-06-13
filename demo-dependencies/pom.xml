@@ -11,6 +11,7 @@
 
     <artifactId>demo-dependencies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <name>demo-dependencies</name>
     <description>Demo project for Spring Boot</description>

@@ -6,7 +6,7 @@ spring:
       #  file-extension: yaml
       #  namespace: af17876e-22f1-438e-aeba-a19c6153e1be
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.31.38:8848,192.168.31.38:8948
         namespace: dev
 
     gateway:
@@ -24,9 +24,9 @@ spring:
           filters:
             - RewritePath=/demo-order/(?<segment>.*), /$\{segment}
         - id: demo-auth
-            uri: lb://demo-auth
-            predicates:
-              - Path=/demo-auth/**
-            filters:
-              - RewritePath=/demo-auth/(?<segment>.*), /$\{segment}
+          uri: lb://demo-auth
+          predicates:
+            - Path=/demo-auth/**
+          filters:
+            - RewritePath=/demo-auth/(?<segment>.*), /$\{segment}
 

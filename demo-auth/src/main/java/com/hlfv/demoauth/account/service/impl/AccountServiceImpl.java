@@ -3,7 +3,6 @@ package com.hlfv.demoauth.account.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hlfv.demoauth.account.entity.Account;
 import com.hlfv.demoauth.account.mapper.AccountMapper;
-import com.hlfv.demoauth.account.service.AccountRoleService;
 import com.hlfv.demoauth.account.service.AccountService;
 import com.hlfv.demoauth.menu.entity.Menu;
 import com.hlfv.demoauth.role.entity.Role;
@@ -30,12 +29,12 @@ import java.util.stream.Collectors;
 @Service
 public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> implements AccountService {
 
-    @Resource
+    /*@Resource
     private AccountMapper accountMapper;
     @Resource
     private AccountRoleService accountRoleService;
     @Resource
-    private RoleMenuService roleMenuService;
+    private RoleMenuService roleMenuService;*/
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

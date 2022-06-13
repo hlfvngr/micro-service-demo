@@ -1,4 +1,4 @@
-package com.hlfv.demoauth.config;
+package com.hlfv.democommon.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.annotation.Resource;
 
@@ -54,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 // .addFilterBefore(new SessionFilter(), UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
-                .loginProcessingUrl("/account/login")
+                // .loginProcessingUrl("/account/login")
                 .successHandler(successHandler)
                 .and()
                 .exceptionHandling()

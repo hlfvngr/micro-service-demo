@@ -1,3 +1,4 @@
+/*
 package com.hlfv.demoauth.role.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -7,6 +8,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+*/
 /**
  * <p>
  * 角色菜单关联 Mapper 接口
@@ -14,8 +16,10 @@ import java.util.List;
  *
  * @author hflv
  * @since 2022-04-26
- */
+ *//*
+
 public interface RoleMenuMapper extends BaseMapper<RoleMenu> {
 
     List<Menu> selectMenuByRoleIds(@Param("roleIds") List<Long> roleIds);
 }
+*/

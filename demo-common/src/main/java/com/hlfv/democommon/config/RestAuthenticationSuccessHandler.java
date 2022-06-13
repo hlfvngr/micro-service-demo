@@ -1,4 +1,4 @@
-package com.hlfv.demoauth.config;
+package com.hlfv.democommon.config;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;

@@ -11,7 +11,6 @@ import org.springframework.web.reactive.DispatcherHandler;
 public class DemoGatewayApplication {
 
     public static void main(String[] args) {
-        // DispatcherHandler
         SpringApplication.run(DemoGatewayApplication.class, args);
     }
 
